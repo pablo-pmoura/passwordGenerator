@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="titles-container">
+        <h1>Gerador de senhas</h1>
+        <p>Utilize o nosso gerador de senhas</p>
+      </div>
+      <div id="generator-container">
+        <input name="password" id="password" type="text" />
+        <p id="char-quantity">16 Caracteres</p>
+        <input
+          type="range"
+          name="password-length"
+          id="password-length"
+          value="16"
+          min="4"
+          max="64"
+        />
+      </div>
+      <div id="copy-save-buttons-container">
+        <button onclick="copyPassword()" id="copy-password-button">
+          Copiar Senha
+        </button>
+        <button onclick="savePassword()" id="save-password-button">
+          Salvar senha
+        </button>
+      </div>
+
+      <div id="saved-passwords-container"></div>
+
+      <div>
+        <button onclick="removeAllPasswords()" id="delete-password-button">
+          Excluir Senha
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
